@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hey visitor</title>
+<style>
+:root {
+    --accent: #E6B325;
+}
+@media (prefers-color-scheme: dark) {
+    * { color: #fff; background: #333; }
+}
+a { color: var(--accent); }
+body { max-width: 40em; margin: 0 auto; }
+div { font-family: sans-serif; padding-left: 1.5em; border-left: 3px solid #ccc; }
+hr { border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+    <h1>Welcome visitor! 😄</h1>
+    <div class="indent">
+    <p>Unfortunately you've reached <b id="hostname"></b>... did you actually mean to do this? Because if you did I have bad news for you, there is nothing to see here today. Try again in the future!</p>
+    <p>Dearly,<br><a href="https://www.github.com/Sevenarth" target="_blank">@Sevenarth</a></p>
+    </div>
+    <script>
+    let hostname = location.hostname.replace('www', '');
+    document.getElementById('hostname').textContent = hostname;
+    document.title = `hey ${hostname} visitor`;
+    </script>
+</body>
+</html>
