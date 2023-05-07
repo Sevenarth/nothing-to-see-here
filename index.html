@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>hey visitor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 :root {
     --accent: #E6B325;
@@ -11,9 +12,13 @@
     * { color: #fff; background: #333; }
 }
 a { color: var(--accent); }
-body { max-width: 40em; margin: 0 auto; }
-div { font-family: sans-serif; padding-left: 1.5em; border-left: 3px solid #ccc; }
+body { max-width: 40em; margin: 0 auto; padding: 0 1em; }
+div { font-family: sans-serif; }
+div.indent { padding-left: 1.5em; border-left: 3px solid #ccc; }
 hr { border: 1px solid #ccc; }
+@media (max-width: 40em) {
+    div.indent { padding-left: 1em; }
+}
 </style>
 </head>
 <body>
